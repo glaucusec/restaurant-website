@@ -1,0 +1,32 @@
+.header_main {
+  background-color: #934501;
+}
+
+.cart_item__count {
+  padding-left: 10px;
+}
+
+.background-div {
+  background-image: url(diningImage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; /* Center the background */
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.cart_button {
+    background-color: #5a2a00;
+    color: white;
+    border-radius: 20px;
+}
+
+.cart_button:hover {
+    padding: 10px;
+    color: white;
+}
+
+
