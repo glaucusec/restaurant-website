@@ -4,7 +4,7 @@ import bulma from "bulma";
 export default function () {
   return (
     <div class="background-div">
-      <div class="summary">
+      <div class="summary" style={{padding: '40px'}}>
         <h1 class="title is-1 has-text-white">
           Delicious Food, Delivered To You
         </h1>

@@ -1,20 +1,44 @@
 .meals_section {
-    padding: 50px 400px;
+  padding: 50px 400px;
 }
 .meals {
-    background-color: white;
-    border-radius: 30px;
-    padding: 50px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 50px;
 }
 .meal_name {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 .meal_desc {
-    font-style: italic;
+  font-style: italic;
 }
 .meal_price {
-    color: rgb(138, 91, 6);
-    font-weight: bold;
-    font-size: 20px;
+  color: rgb(138, 91, 6);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.amount-label {
+    margin-right: 10px;
+}
+
+.btn {
+  border: 0px;
+  border-radius: 10px;
+  padding: 5px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #934501;
+  color: white;
+}
+
+.amount-number {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.second-column {
+    align-items: end;
 }

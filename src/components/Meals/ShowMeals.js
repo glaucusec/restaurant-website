@@ -12,9 +12,27 @@ export default function (props) {
           {meals.map((meal) => {
             return (
               <>
-                <li className="meal_name">{meal.meal_name}</li>
-                <li className="meal_desc">{meal.meal_desc}</li>
-                <li className="meal_price">${meal.meal_price}</li>
+                <div className="columns">
+                  <div className="column is-half">
+                    <li className="meal_name">{meal.meal_name}</li>
+                    <li className="meal_desc">{meal.meal_desc}</li>
+                    <li className="meal_price">${meal.meal_price}</li>
+                  </div>
+                  <div class="column is-half second-column">
+                    <div class="amount-wrapper">
+                      <span
+                        class="amount-label"
+                        style={{ fontSize: "20px", fontWeight: "bold" }}
+                      >
+                        Amount
+                      </span>
+                      <span class="amount-number">1</span>
+                    </div>
+                    <div>
+                      <button class="btn">Add</button>
+                    </div>
+                  </div>
+                </div>
                 <hr />
               </>
             );
