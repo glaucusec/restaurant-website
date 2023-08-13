@@ -11,7 +11,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; /* Center the background */
-  height: 250px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,3 +30,11 @@
 }
 
 
+.summary {
+  /* padding-bottom: 400px; */
+  max-width: 800px;
+  background-color: #3f3f3f;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 40px;
+}
