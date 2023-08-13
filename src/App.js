@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Header from "./components/Layout/Header";
 import Summary from "./components/Layout/Summary";
 import ShowMeals from "./components/Meals/ShowMeals";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   const [meals, setMeals] = useState([
@@ -32,6 +33,7 @@ function App() {
       <Header />
       <Summary />
       <ShowMeals meals={meals}/>
+      <Cart/>
     </div>
   );
 }
