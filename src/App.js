@@ -6,6 +6,7 @@ import ShowMeals from "./components/Meals/ShowMeals";
 import Cart from "./components/Cart/Cart";
 
 function App() {
+  const [showCart, setShowCart] = useState('');
   const [meals, setMeals] = useState([
     {
       meal_name: "Sushi",
@@ -30,10 +31,10 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header setShowCart={setShowCart} />
       <Summary />
       <ShowMeals meals={meals}/>
-      <Cart/>
+      <Cart showCart={showCart} setShowCart={setShowCart}/>
     </div>
   );
 }

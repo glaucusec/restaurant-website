@@ -1,7 +1,7 @@
 import bulma from "bulma";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ setShowCart }) => {
   return (
     <>
       <div class="columns header_main p-4">
@@ -11,7 +11,10 @@ const Header = () => {
           </h1>
         </div>
         <div class="column header_button has-text-centered">
-          <button class="button is-large cart_button">
+          <button
+            onClick={() => setShowCart("is-active")}
+            class="button is-large cart_button"
+          >
             Your Cart<p class="cart_item__count">4</p>
           </button>
         </div>
