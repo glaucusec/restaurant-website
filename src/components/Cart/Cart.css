@@ -4,3 +4,10 @@
     color: black;
     border-radius: 10px;
 }
+
+.cart_price {
+    font-weight: bold;
+}
+hr {
+    background-color: #934501;
+}

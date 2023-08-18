@@ -5,6 +5,7 @@ export default function CartProvider(props) {
   const [cartItems, updateCartItems] = useState([]);
 
   const addItemToCartHandler = ({ meal, amount }) => {
+    console.log({meal, amount})
     const isAlreadyAdded = cartItems.some(
       (item) => item.meal_id === meal.meal_id
     );
@@ -27,7 +28,27 @@ export default function CartProvider(props) {
         ]);
   };
 
-  const removeItemFromCartHandler = (id) => {};
+  const removeItemFromCartHandler = (id) => {
+    const mealIndex = cartItems.findIndex((item) => {
+      return item.meal_id == id;
+    });
+    if(cartItems[mealIndex].amount == 1) {
+        const newItems = cartItems.filter(item => {
+            return item.meal_id != id;
+        })
+        updateCartItems(newItems);
+    } else {
+        const newItems = cartItems.map(item => {
+            if(item.meal_id === id) {
+                item.amount -= 1
+                return item;
+            } else {
+                return item;
+            }
+        })
+        updateCartItems(newItems);
+    }
+  };
 
   const cartContext = {
     items: cartItems,
