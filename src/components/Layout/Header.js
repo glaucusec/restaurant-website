@@ -1,7 +1,16 @@
 import bulma from "bulma";
 import "./Header.css";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 
 const Header = ({ setShowCart }) => {
+  const cartCtx = useContext(CartContext);
+
+  const numberOfCartItems = cartCtx.items.reduce((currNumber, item) => {
+    return currNumber + item.amount;
+  }, 0);
+  console.log(cartCtx.items);
+
   return (
     <>
       <div class="columns header_main p-4">
@@ -15,7 +24,7 @@ const Header = ({ setShowCart }) => {
             onClick={() => setShowCart("is-active")}
             class="button is-large cart_button"
           >
-            Your Cart<p class="cart_item__count">4</p>
+            Your Cart<p class="cart_item__count">{numberOfCartItems}</p>
           </button>
         </div>
       </div>
